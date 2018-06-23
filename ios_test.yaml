@@ -1,0 +1,17 @@
+---
+- hosts: all
+  become : yes
+  gather_facts: yes
+
+  tasks:
+   - name: show tac
+     ios_command:
+        commands:
+          - show tech-support
+        provider: "{{ ios_provider }}"
+     register: tech
+
+   - name: save out
+     copy:
+        content: "{{ tech.stdout[0] }}"
+        dest: "/etc/ansible/backups/{{ ansible_date_time.date }}_{{ inventory_hostname }}.txt"
