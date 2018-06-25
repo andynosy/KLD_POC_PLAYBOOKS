@@ -1,5 +1,6 @@
 ---
 - name: copy device running configuration
+  connection: local
   ios_command:
       commands:
          - show tech-support
