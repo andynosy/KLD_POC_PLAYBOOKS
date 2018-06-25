@@ -8,4 +8,4 @@
 - name: save out
   copy:
      content: "{{ tech.stdout[0] }}"
-     dest: "https://github.com/andynosy/KLD_POC_PLAYBOOKS.git/backups/{{ ansible_date_time.date }}_{{ inventory_hostname }}.txt"
+     dest: "/etc/ansible/backups/{{ ansible_date_time.date }}_{{ inventory_hostname }}.txt"
