@@ -1,8 +1,5 @@
 ---
 - name: copy device running configuration
-
-  tasks:
-   - name: show tac
      ios_command:
         commands:
           - show tech-support
