@@ -1,5 +1,4 @@
 ---
-- hosts: all
   connection: local
   become : yes
   gather_facts: yes
