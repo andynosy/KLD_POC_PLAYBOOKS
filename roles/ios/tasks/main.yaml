@@ -4,7 +4,7 @@
       commands:
          - show tech-support
       provider: "{{ ios_provider }}"
-  register: tech
+      register: tech
 - name: save out
      copy:
         content: "{{ tech.stdout[0] }}"
