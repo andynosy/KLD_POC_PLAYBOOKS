@@ -6,6 +6,6 @@
       provider: "{{ ios_provider }}"
   register: tech
 - name: save out
-     copy:
-        content: "{{ tech.stdout[0] }}"
-        dest: "/etc/ansible/backups/{{ ansible_date_time.date }}_{{ inventory_hostname }}.txt"
+  copy:
+     content: "{{ tech.stdout[0] }}"
+     dest: "/etc/ansible/backups/{{ ansible_date_time.date }}_{{ inventory_hostname }}.txt"
