@@ -6,11 +6,7 @@
       provider: "{{ ios_provider }}"
   register: tech
   
-- name: create temporary build directory
-  tempfile:
-    state: directory
-    suffix: build
 - name: save out
   copy:
      content: "{{ tech.stdout[0] }}"
-     dest: "/backups/{{ ansible_date_time.date }}_{{ inventory_hostname }}.txt
+     dest: "/var/lib/awx/projects/backups/{{ ansible_date_time.date }}_{{ inventory_hostname }}.txt
