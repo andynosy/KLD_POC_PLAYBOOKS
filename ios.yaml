@@ -1,6 +1,5 @@
 ---
- - name: local
-   host: all
+ - host: all
    become : yes
    gather_facts: yes
    roles:
