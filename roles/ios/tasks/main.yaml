@@ -1,8 +1,5 @@
 ---
-- hosts: all
-  connection: local
-  become : yes
-  gather_facts: yes
+  name: copy device running configuration
 
   tasks:
    - name: show tac
