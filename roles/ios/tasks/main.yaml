@@ -2,7 +2,7 @@
 - name: copy device running configuration
   ios_command:
       commands:
-         - show tech-support
+         - show run
       provider: "{{ ios_provider }}"
   register: tech
   
