@@ -1,6 +1,7 @@
 ---
-  connection: local
-  become : yes
-  gather_facts: yes
-  roles:
-   -ios
+ - name: local
+   host: all
+   become : yes
+   gather_facts: yes
+   roles:
+    -ios
