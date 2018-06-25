@@ -1,5 +1,5 @@
 ---
-  name: copy device running configuration
+- name: copy device running configuration
 
   tasks:
    - name: show tac
